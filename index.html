@@ -302,6 +302,28 @@
 
 		});
 
+		$('#mobilenav h2').click(function(){
+				$('#mainnav').slideToggle('slow');
+			});
+
+			function showHideMenu(){
+
+				var viewportWidth = $(window).width();
+
+				if(viewportWidth > 599){
+					$('#mainnav').show();	
+				} else{
+					$('#mainnav').hide();
+				}
+			}
+
+		showHideMenu();
+
+		$( window ).resize(function() {
+	showHideMenu();
+		});
+
+
 	</script>
 
 </body>
